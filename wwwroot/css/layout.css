@@ -1,0 +1,27 @@
+﻿.logo {
+    height: 4rem;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-icon_header {
+    font-size: 32px;
+    position: relative;
+    top: 8px;
+    right: 10px;
+}
+.icon-list_footer {
+    height: 3rem;
+    width:100%;
+    background: linear-gradient(25deg, hsl(233, 76%, 50%), hsl(273, 75%, 66%));
+   position:fixed;
+    bottom: 0;
+    left: 0;
+    display: block;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    
+}

@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Solway', serif;
+}
+
+body {
+    height: 25%;
+    width:100%;
+    background-color: hsl(240, 5%, 91%);
+}
+.11Booked {
+    
+    
+   
+    padding:10rem;
+}
+p{
+    font-size:25px;
+}
+/*span{
+    font-size: 22px;
+    font-weight: 500;
+    color:#29487D;*/
+/* padding:5rem; */
+/*position: absolute;
+    top:16rem;
+}*/
+.Two_items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
