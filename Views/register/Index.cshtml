@@ -1,0 +1,25 @@
+﻿
+
+@{
+    ViewData["Title"] = "Create_Profile";
+    Layout = "~/Views/Shared/_Layout_none.cshtml";
+}
+<head>
+     <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+</head>
+
+
+
+
+
+
+        <div class="Applogo">
+            <img src="~/logo.png" alt="logo-Image" id="Imagelogo">
+        </div>
+        <div class="CreateAccount">
+            <a asp-action="CreateProfile" class="create"><span>Create An Account</span></a>
+        </div>
+        <div class="AlreadyAccount">
+           <a asp-action="Signin" class="already"> <span>Already have an account?</span></a> 
+        </div>
+    

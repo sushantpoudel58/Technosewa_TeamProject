@@ -1,0 +1,67 @@
+﻿@model IEnumerable<TechnoSewa.Models.registerModel>
+
+
+@{
+ Layout = "~/Views/Shared/_Layout.cshtml";
+ }
+
+
+    <head>
+
+     <link rel="stylesheet" href="~/css/Tecnician.css" asp-append-version="true" />
+ </head>
+ 
+
+
+
+ 
+
+     
+  
+
+ 
+
+
+
+ 
+
+
+  <div class="Big_Big_Box">
+
+
+<div class="Main_box_big">
+        @foreach (var item in Model)
+        {
+          <div  class="container" > 
+                  <div class="imgage_inside_box">
+
+                         <img src="~/Images/noprofile.jpg" width=25 height=25 alt="..">
+                   </div>
+               <div  class="technician_data">  
+                   <div class="One_Technician1"> @Html.DisplayNameFor(model => model.UserName):
+
+                        @Html.DisplayFor(modelItem => item.UserName)
+                </div>
+                   <br>
+               <div class="One_Technician2"> @Html.DisplayNameFor(model => model.Phone_Number):
+
+
+                        @Html.DisplayFor(modelItem => item.Phone_Number)
+
+                     <div class="One_Technician2">
+                      <br>
+                  <p> Rating:4.7</p>
+                  </div>
+                      <div class="One_Technician3">
+                          <br>
+                     <a asp-action="Book" >BOOK</a>
+                      </div>
+
+             </div>
+             </div>
+
+
+         </div>
+        }
+</div>
+</div>

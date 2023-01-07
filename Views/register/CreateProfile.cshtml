@@ -1,0 +1,78 @@
+﻿@using TechnoSewa
+@model registerModel
+@{
+    ViewData["Title"] = "Create_Profile";
+    Layout = "~/Views/Shared/_Layout_none.cshtml";
+}
+ 
+<head>
+     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+      <link rel="stylesheet" href="~/css/Profile.css" asp-append-version="true" />
+
+
+
+</head>
+
+
+
+<div class="box">
+      <div class="upload">
+        <img src="~/images/noprofile.jpg" width=100 height=100 alt="">
+
+        <div class="round">
+          <i class=" fa fa-camera" style="color: #fff;"></i>
+
+          <input type="file">
+        </div>
+      </div>
+      <div >
+        <form asp-action="CreateProfile" class="input-container">
+          <div class="txt_field">
+            <input asp-for="UserName"type="text" required>
+            <span></span>
+            <label asp-for="UserName">Full Name</label>
+          </div>
+          <div class="txt_field">
+            <input asp-for="Address" type="text" required>
+            <span></span>
+            <label asp-for="Address">Address</label>
+          </div>
+          <div class="txt_field">
+             <input asp-for="Email" type="email" required>
+            <span></span>
+            <label asp-for="Email">Email</label>
+          </div>
+           <div class="txt_field">
+            <input asp-for="Phone_Number" type="text" required>
+            <span></span>
+            <label asp-for="Phone_Number">Phone Number</label>
+          </div>
+          <div class="header">
+          <div class="text_field">
+            <label class="choose">Choose a role</label>
+            </div>
+            <div class="role">
+            <input asp-for="Role" id="RadioButton1" type="radio" name="role" value="Client" /><labelforlabelfor="RadioButton1">Client</label>
+            <input asp-for="Role" id="RadioButton2" type="radio" name="role" value="Technician" /><labelforlabelfor="RadioButton2">Technician</label> 
+          </div>
+          </div>
+          <div class="txt_field">
+             <input asp-for="Password" type="password" required>
+            <span></span>
+            <label asp-for="Password">Password</label>
+          </div>
+          
+        
+                            @*  <select name="Role_Determine">
+  <option value="Client">Client</option>
+  <option value="Technician">Technician</option>
+
+</select>*@
+
+         
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+
+    </div>
+  </div>

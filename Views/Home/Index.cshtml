@@ -1,0 +1,90 @@
+﻿<head>
+     <link rel="stylesheet" href="~/css/homepage.css" asp-append-version="true" />
+</head>
+
+
+<div class="headingText">
+            <h1 class="headingMessage">Welcome!</h1>
+        </div>
+        <div class="subHeadingtext">
+            <span class="subheading">To Our Services</span>
+        </div>
+        <div class="sliderImage">
+            <img src="~/images/Reparing-Image.jpg" alt="Technician-Plumbing-work" id="Plumber-Repair" name="slide">
+        </div>
+        <div class="ContainerforHire">
+                <div class="HireHeading">
+                    <span class="hirehead">Hire the Technician</span>
+                </div>
+
+
+               
+
+                
+                
+                <div class="container">
+                    <div class="sub-container">
+                        <a style="text-decoration: none" asp-area="" asp-controller="Plumbing" asp-action="Index" class="TechMsg">Plumbing</a>
+                        <img src="~/images/WashBasin-Image.jpg" alt="Electric"
+                            id="Electric-tools">
+                    </div>
+                    <div class="sub-container2">
+                        <a style="text-decoration: none" asp-area="" asp-controller="Plumbing" asp-action="Index" class="TechMsg">Electrician</a>
+                        <img src="~/images/Electric-Image.jpg" alt="Electric"
+                            id="Electric-tools">
+                    </div>
+
+
+
+                   
+                    </div>
+                   
+                </div>
+            </div>
+            
+            <div class="containerforPopular">
+                <span class="popularHeading">Popular Services</span>
+                <div class="featureImage">
+                    <img src="~/images/Tap-Leakage.jpg" alt="waterTap-Image" id="waterTap">
+                    <button class="ImageName">Tap Leakage Repair</button>
+                </div>
+                 <div class="featureImage2">
+                    <img src="~/images/Water-pipeLeakage.jpg" alt="waterPipe-Image" id="pipeImg">
+                    <button class="ImageName2">Pipe Leakage Repair</button>
+                </div>
+                <div class="featureImage3">
+                    <img src="~/images/Power-Socket.jpg" alt="powersocket-Image" id="powersocketImg">
+                    <button class="ImageName3">Power socket Repair</button>
+                </div>
+                <div class="featureImage4">
+                     <img src="~/images/socket-fit.jpg" alt="socketfit-Image" id="socketfitImg">
+                    <button class="ImageName4">Socket Fitting</button>
+                </div>
+            </div>
+
+
+    </main>
+     
+    
+    <script>
+        let loop=0;
+let images=[];
+
+//Image List
+images[0]='/Images/Reparing-Image.jpg';
+images[1]='/Images/Plumber-Tools-Image.jpg';
+images[2]='/Images/Techincian-tools.jpg';
+
+//change Image
+function changeImg(){
+  document.slide.src=images[loop];
+  if(loop<images.length-1){
+    loop++;
+  }
+  else{
+    loop=0;
+  }
+  setTimeout(changeImg,4000);
+}
+window.onload=changeImg;
+    </script>

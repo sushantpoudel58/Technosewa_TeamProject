@@ -1,0 +1,89 @@
+﻿@using TechnoSewa.Models
+@model SubmitProblemModel
+@{
+    
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/plumbing.css" asp-append-version="true" />
+</head>
+<form asp-action="Index" >
+
+        <br />
+        <div class="main11"
+      <h2>Please! Choose your problem.</h2>
+      <div class="chooseProblemContainer11">
+        <div class="subcontainer11">
+            <div class="pipeleakageContainer11">
+                <label asp-for="Pipe_Leakage" class="Pipe_Repair11">
+                    <input asp-for="Pipe_Leakage" value="Pipe Leakage" type="checkbox" id="checkbox-1">
+                   <img src="~/images/pipeimg.jpg" alt="pipeimg" id="pipe">
+                   
+                     <span   class="pipeBtn1">Pipe Leakage</span>
+                </label>
+            </div>
+           
+        </div>
+
+        <div class="subcontainer11">
+          <div class="tapleakageContainer11">
+              <label asp-for="Tap_Replacement"class="tap_Repair11">
+                  <input asp-for="Tap_Replacement" value="Tap Replacement" type="checkbox" id="checkbox-2">
+                  <img src="~/images/tapimg.jpg" alt="tapimg" id="tap"><span
+                      class="tapBtn11">Tap <br>Replacement</span>
+              </label>
+          </div>
+         
+      </div>
+
+      <div class="subcontainer11">
+        <div class="basinleakageContainer11">
+            <label asp-for="Basin_Replacement" class="basin_Repair11">
+                <input asp-for="Basin_Replacement" value="wash Basin Repair" type="checkbox" id="checkbox-3">
+                <img src="~/images/basinimg.jpg" alt="basinimg" id="basin"><span
+                    class="basinBtn11"> Wash Basin<br> Repair</span>
+            </label>
+        </div>
+        
+    </div>
+    <div class="subcontainer11">
+      <div class="commodeleakageContainer11">
+          <label asp-for="Commode_Replacement"class="commode_Repair11">
+              <input asp-for="Commode_Replacement" value="commode Repair" type="checkbox" id="checkbox-4">
+              <img src="~/images/commodeimg.jpg" alt="commodeimg" id="commode"><span
+                  class="commodeBtn11"> Commode <br>Repair</span>
+          </label>
+      </div>
+      
+  </div>
+  <div class="subcontainer11">
+    <div class="othersProblemContainer11">
+        <label asp-for="Other_Problems"class="others_problem11">
+
+            <button class="btnproblem11">Other problems</button>
+        </label>
+    </div>
+  </div>
+      </div>
+    <br>
+   <div class="problemhidden11">
+    <h4>Describe your problem here.<br><br></r><input asp-for="Other_Problems" type="text" ></h4>
+    <br>
+    <br>
+
+<input type="file" id="actual-btn" hidden/>
+
+<label class="actualbtn11" for="actual-btn"><i class="fa fa-camera" aria-hidden="true"></i> Upload Photo</label>
+
+<span id="file-chosen"></span>
+      <br>
+      <br>
+      <br>
+    </div>
+    <input type="submit" value="Submit">
+    
+    </form>
+    </div>
+  
+  
